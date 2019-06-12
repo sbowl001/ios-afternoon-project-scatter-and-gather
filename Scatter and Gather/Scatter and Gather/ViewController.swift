@@ -74,9 +74,10 @@ class ViewController: UIViewController {
 //            self.lambdaImage.transform = .identity
             for label in self.labels {
                 label.transform = .identity
-                UIView.addKeyframe(withRelativeStartTime: 2.5, relativeDuration: 0.5, animations: {
-                     label.textColor = .black
-                })
+                label.textColor = .black
+//                UIView.addKeyframe(withRelativeStartTime: 2.5, relativeDuration: 0.5, animations: {
+//                     label.textColor = .black
+//                })
                
             }
         }, completion: nil)
