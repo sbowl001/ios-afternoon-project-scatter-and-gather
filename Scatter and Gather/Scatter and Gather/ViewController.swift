@@ -59,6 +59,7 @@ class ViewController: UIViewController {
                 label.transform = CGAffineTransform(scaleX: randomX, y: -randomY)
                 label.transform = CGAffineTransform(translationX: randomX, y: randomY)
                 label.transform = CGAffineTransform(rotationAngle: randomX)
+                
                 label.textColor = self.colors.randomElement()
 //                label.backgroundColor = self.colors.randomElement()
             }
@@ -69,18 +70,21 @@ class ViewController: UIViewController {
     }
     
     func gatherAnimation(){
-        UIView.animateKeyframes(withDuration: 3.0, delay: 0.0, options: [], animations: {
+        UIView.animate(withDuration: 3.0) {
             self.lambdaImage.alpha = 1
 //            self.lambdaImage.transform = .identity
             for label in self.labels {
                 label.transform = .identity
+//                label.backgroundColor = .white
+              
+                
                 label.textColor = .black
 //                UIView.addKeyframe(withRelativeStartTime: 2.5, relativeDuration: 0.5, animations: {
 //                     label.textColor = .black
 //                })
                
             }
-        }, completion: nil)
+        }
       
     }
 }
